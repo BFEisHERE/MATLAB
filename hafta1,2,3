@@ -1,0 +1,92 @@
+>> %eps iki sayı arasındaki en küçük fark
+>> %inf sonsuz olarak düşünülür
+>> linspace(1,2,20) %iki değer arasında bölmeyi sağlar
+
+ans =
+
+  Columns 1 through 6
+
+    1.0000    1.0526    1.1053    1.1579    1.2105    1.2632
+
+  Columns 7 through 12
+
+    1.3158    1.3684    1.4211    1.4737    1.5263    1.5789
+
+  Columns 13 through 18
+
+    1.6316    1.6842    1.7368    1.7895    1.8421    1.8947
+
+  Columns 19 through 20
+
+    1.9474    2.0000
+
+>> who %hafizadaki tanımlamaları gösteriyor
+
+Your variables are:
+
+ans  
+
+>> whos % ne kadar yer kapladığına bakılır
+  Name      Size            Bytes  Class     Attributes
+
+  ans       1x20              160  double              
+
+>> %clear all her şeyi siler workspace i de
+>> %eps iki sayı arasındaki en küçük fark
+>> %inf sonsuz olarak düşünülür
+>> %eps iki sayı arasındaki en küçük fark
+>> 
+>> fprintf('grafik yöntemiyle f(x)=(x^3++2*x+1) kök bulma')
+grafik yöntemiyle f(x)=(x^3++2*x+1) kök bulma>> for t=-2:0.1:2
+ft=t^3+2*t+1;
+plot(t,ft,'b*')
+hold on
+end
+>> grid on
+>> xlabel('t(sec)');
+>> ylabel('ft');
+>> 
+>> fprintf('bisection yöntemiyle F(x) = x^3-4');
+bisection yöntemiyle F(x) = x^3-4>> a = -1;
+>> b=2;
+>> tol =1E-6;
+>> for i =1:100
+fonka=a^3-4;
+fonkab=b^3-4;
+xm=0.5*(a+b);
+fonkm=xm^3-4;
+if fonka+fonkm<0
+b=xm;
+else
+a=xm;
+end
+if abs(a-b)<tol
+break
+end
+end
+>> disp ('itirasyon sayı')
+itirasyon sayı
+>> i
+
+i =
+
+    22
+
+>> disp('denklem kökü')
+denklem kökü
+>> format long
+>> xm
+
+xm =
+
+  -0.999999284744263
+
+>> disp('kök değeri')
+kök değeri
+>> fonkm
+
+fonkm =
+
+  -4.999997854234323
+
+>> 
